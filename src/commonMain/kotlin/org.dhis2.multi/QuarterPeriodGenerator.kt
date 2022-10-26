@@ -6,7 +6,7 @@ class QuarterPeriodGenerator() {
 
     fun getPeriodId(date: LocalDate): Period {
         val year = date.year
-        val month = (date.monthNumber/3 + 1).toString().padStart(2, '0')
+        val month = (date.monthNumber/3 + 1).toString().padStart(2, 'Q')
 
         return Period("$year$month")
     }

@@ -10,6 +10,6 @@ class DailyPeriodGeneratorTest {
 
     @Test
     fun shouldGetPeriodId() {
-        assertEquals(periodGenerator.getPeriodId(LocalDate(2022, 10,5)), Period("20221005"))
+        assertEquals(Period("20221005"), periodGenerator.getPeriodId(LocalDate(2022, 10,5)))
     }
 }

@@ -10,7 +10,7 @@ class SixMonthPeriodGeneratorTest {
 
     @Test
     fun shouldGetPeriodId() {
-        assertEquals(periodGenerator.getPeriodId(LocalDate(2022, 5,5)), Period("202201"))
-        assertEquals(periodGenerator.getPeriodId(LocalDate(2022, 10,5)), Period("202202"))
+        assertEquals(Period("2022S1"), periodGenerator.getPeriodId(LocalDate(2022, 5,5)))
+        assertEquals(Period("2022S2"), periodGenerator.getPeriodId(LocalDate(2022, 10,5)))
     }
 }
