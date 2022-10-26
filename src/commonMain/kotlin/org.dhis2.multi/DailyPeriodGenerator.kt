@@ -1,3 +1,5 @@
+package org.dhis2.multi
+
 import kotlinx.datetime.LocalDate
 
 class DailyPeriodGenerator {

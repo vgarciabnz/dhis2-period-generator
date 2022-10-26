@@ -1,6 +1,7 @@
 plugins {
-    kotlin("multiplatform") version "1.7.10"
+    id("dev.petuska.npm.publish") version "3.0.3"
     id("maven-publish")
+    kotlin("multiplatform") version "1.7.10"
 }
 
 group = "me.dhis2"
@@ -8,6 +9,15 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+}
+
+npmPublish {
+    registries {
+        register("npmjs") {
+            uri.set(uri("https://registry.npmjs.org")) //
+            authToken.set("obfuscated")
+        }
+    }
 }
 
 kotlin {
@@ -36,7 +46,6 @@ kotlin {
         else -> throw GradleException("Host OS is not supported in Kotlin/Native.")
     }
 
-    
     sourceSets {
         val commonMain by getting {
             dependencies {
