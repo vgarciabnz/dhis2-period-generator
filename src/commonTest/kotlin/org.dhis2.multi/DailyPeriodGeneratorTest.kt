@@ -1,5 +1,6 @@
+package org.dhis2.multi
+
 import kotlinx.datetime.LocalDate
-import org.dhis2.multi.DailyPeriodGenerator
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

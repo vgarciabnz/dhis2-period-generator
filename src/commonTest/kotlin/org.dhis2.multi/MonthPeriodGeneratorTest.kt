@@ -1,5 +1,6 @@
+package org.dhis2.multi
+
 import kotlinx.datetime.LocalDate
-import org.dhis2.multi.MonthPeriodGenerator
 import kotlin.test.Test
 
 class MonthPeriodGeneratorTest {
