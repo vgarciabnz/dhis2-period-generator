@@ -1,8 +1,9 @@
 plugins {
     kotlin("multiplatform") version "1.7.10"
+    id("maven-publish")
 }
 
-group = "me.victor"
+group = "me.dhis2"
 version = "1.0-SNAPSHOT"
 
 repositories {
