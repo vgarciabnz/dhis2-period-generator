@@ -2,6 +2,7 @@ package org.dhis2.multi
 
 import kotlinx.datetime.LocalDate
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class MonthPeriodGeneratorTest {
 
@@ -9,7 +10,6 @@ class MonthPeriodGeneratorTest {
 
     @Test
     fun shouldGetPeriodId() {
-        val periodId = periodGenerator.getPeriodId(LocalDate(2022, 10, 5))
-        var periodDigitId = periodGenerator.getPeriodId(LocalDate(2021 ,5,3))
+        assertEquals(periodGenerator.getPeriodId(LocalDate(2022, 10,5)), Period("202210"))
     }
 }
