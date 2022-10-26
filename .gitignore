@@ -10,13 +10,13 @@
 out
 
 # ignore .idea directory, except copyright
-!.idea
+.idea
 .idea/*
-!.idea/copyright
-!.idea/gradle.xml
-!.idea/scopes
+.idea/copyright
+.idea/gradle.xml
+.idea/scopes
 .idea/scopes/*
-!.idea/scopes/copyright.xml
+.idea/scopes/copyright.xml
 
 # Ant
 build.xml

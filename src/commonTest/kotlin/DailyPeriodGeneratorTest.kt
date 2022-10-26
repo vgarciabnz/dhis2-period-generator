@@ -1,6 +1,7 @@
 import kotlinx.datetime.LocalDate
+import org.dhis2.multi.DailyPeriodGenerator
 import kotlin.test.Test
-import kotlin.test.assertTrue
+import kotlin.test.assertEquals
 
 class DailyPeriodGeneratorTest {
 
@@ -8,6 +9,6 @@ class DailyPeriodGeneratorTest {
 
     @Test
     fun shouldGetPeriodId() {
-        assertTrue(periodGenerator.getPeriodId(LocalDate(2022, 10,5)) == "20221005")
+        assertEquals(periodGenerator.getPeriodId(LocalDate(2022, 10,5)), Period("20221005"))
     }
 }
