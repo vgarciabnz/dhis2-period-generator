@@ -6,7 +6,7 @@ class SixMonthPeriodGenerator() {
 
     fun getPeriodId(date: LocalDate): Period {
         val year = date.year
-        val month = (date.monthNumber/6 + 1).toString().padStart(2, 'S')
+        val month = ((date.monthNumber-1)/6 + 1).toString().padStart(2, 'S')
 
         return Period("$year$month")
     }
