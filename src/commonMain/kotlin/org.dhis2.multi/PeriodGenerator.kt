@@ -2,9 +2,11 @@ package org.dhis2.multi
 
 import kotlinx.datetime.LocalDate
 import org.dhis2.multi.PeriodType.*
+import kotlin.js.JsName
 
 class PeriodGenerator {
 
+    @JsName("getPeriodId")
     fun getPeriodId(date: LocalDate, periodType: PeriodType): Period {
         return when (periodType) {
             Yearly -> YearlyPeriodGenerator().getPeriodId(date)
